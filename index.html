@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurant l’eustache</title>
+  <meta name="description" content="Reservations and info for Restaurant l’eustache." />
+
+  <!-- Serif for title -->
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --cream: #F3EFE9;
+      --text: #111111;
+      --hairline: rgba(0,0,0,.15);
+      --shadow: 0 8px 22px rgba(0,0,0,.12);
+      --maxw: 760px;
+      --button-height: 50px;
+    }
+
+    *{ box-sizing:border-box; }
+
+    html, body{
+      height:100%;
+      margin:0;
+      background: var(--cream);
+      color: var(--text);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Page layout */
+    .page{
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0px 16px calc(var(--button-height) + 80px);
+      text-align: center;
+    }
+
+    /* Typography */
+    h1{
+      font-family: "EB Garamond", serif;
+      font-size: 24px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      margin: 0 0 18px;
+    }
+
+    .mono{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12px;
+      line-height: 1.7;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .section{
+      margin: 26px 0;
+    }
+
+    .label{
+      display:block;
+      font-weight:700;
+      margin-bottom: 8px;
+    }
+
+    a{
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+    a:hover{ border-bottom-color: currentColor; }
+
+    /* Brand block */
+    .brand{
+      margin-bottom: 42px;
+    }
+
+    .logo{
+      width: 200px;   /* ← logo size as requested */
+      margin: 0 auto 16px;
+    }
+
+    .logo img{
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Legal */
+    .legal{
+      margin-top: 40px;
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: lowercase;
+      opacity: .9;
+    }
+
+    /* Sticky Book a Table button */
+    .sticky{
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 20px;
+      display: flex;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .sticky a{
+      pointer-events: auto;
+      height: var(--button-height);
+      padding: 0 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      background: #fff;
+      border: 1px solid var(--hairline);
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .sticky a:hover{
+      transform: translateY(-1px);
+    }
+
+    /* Mobile */
+    @media (max-width: 520px){
+      .logo{ width: 155px; }
+      .page{ padding-top: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+
+    <!-- BRAND -->
+    <header class="brand">
+      
+
+      <div class="logo">
+        <img src="leustachelogo.svg" alt="l’eustache logo">
+      </div>
+
+      <div class="mono">
+        WEISESTRASSE 49<br>
+        BERLIN, NEUKÖLLN
+      </div>
+    </header>
+
+    <!-- HOURS -->
+    <section class="section mono">
+      <span class="label">Kitchen opening times</span>
+      <div>Wednesday &amp; Thursday 18:00 – 22:30</div>
+      <div>Friday to Sunday 17:00 – 23:00</div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="section mono">
+      <span class="label">Instagram</span>
+      <div>
+        <a href="https://instagram.com/RESTAURANTLEUSTACHE" target="_blank">
+          @RESTAURANTLEUSTACHE
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section mono">
+      <span class="label">Get in touch</span>
+      <div><a href="mailto:restaurantleustache@gmail.com">restaurantleustache@gmail.com</a></div>
+      <div><a href="tel:+493012345678">+49 30 12345678</a></div>
+    </section>
+
+    <!-- LEGAL -->
+    <div class="legal mono">
+      <a href="/impressum.html">impressum</a>
+    </div>
+
+  </main>
+
+  <!-- BOOK A TABLE -->
+  <nav class="sticky">
+    <a href="https://YOUR-ZENCHEF-BOOKING-LINK" target="_blank">
+      Book a table
+    </a>
+  </nav>
+</body>
+</html>
